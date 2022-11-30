@@ -57,8 +57,12 @@
     <?php 
         // $hotels = array('name','description','parking', 'vote', 'distance_to_center');
         foreach ($hotels as $item){
-          echo '<div>'. $item ['name'] . '</div>';
+            foreach ($item as $key=>$value) {
+                echo '<div>'. $key. '=' . $value . '</div>';
+            }
+          
         }
+        
 
     ?>
     
