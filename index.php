@@ -55,9 +55,9 @@
 </head>
 <body>
     <?php 
-        $hotels = array('name','description','parking', 'vote', 'distance_to_center');
+        // $hotels = array('name','description','parking', 'vote', 'distance_to_center');
         foreach ($hotels as $item){
-          echo $item . '<br>';
+          echo '<div>'. $item ['name'] . '</div>';
         }
 
     ?>
