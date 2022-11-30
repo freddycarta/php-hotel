@@ -54,17 +54,39 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <?php 
-        // $hotels = array('name','description','parking', 'vote', 'distance_to_center');
-        foreach ($hotels as $item){
-            foreach ($item as $key=>$value) {
-                echo '<div>'. $key. '=' . $value . '</div>';
-            }
-          
-        }
-        
-
-    ?>
-    
+    <div class="container">
+        <div class="row">
+            <?php 
+                foreach ($hotels as $item) {   ?>
+                    <div class="col-4">
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <p class="card-text">
+                                <?php echo $item['name'] ?> 
+                                </p>
+                                <p class="card-text">
+                                <?php echo $item['description'] ?> 
+                                </p>
+                                <p class="card-text">
+                                <?php echo $item['parking'] ?> 
+                                </p>
+                                <p class="card-text">
+                                <?php echo $item['vote'] ?> 
+                                </p>
+                                <p class="card-text">
+                                <?php echo $item['distance_to_center'] ?> 
+                                </p>
+                            </div>
+                    </div>
+                </div>
+                <?php   }
+                ?>
+              
+                
+                
+                
+                 
+        </div>
+    </div>
 </body>
 </html>
